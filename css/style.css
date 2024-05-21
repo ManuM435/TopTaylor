@@ -22,12 +22,34 @@ a {
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: url('../img/headerbackground.png');
+    background-size: cover;
     display: flex;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 10px 10% 15px 0; 
-    align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    height: 60px;
-    box-sizing: border-box; 
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-logo {
+    height: 50px; /* Adjust as needed */
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.head-nav-link {
+    text-decoration: none;
+    color: #fff; /* Adjust color for better contrast with your header background */
+    font-size: 1.2em;
+}
+
+main {
+    padding-top: 80px; /* Adjust to ensure content isn't hidden under the fixed header */
 }
