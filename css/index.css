@@ -7,5 +7,42 @@
     object-fit: cover; /* Ensure the image covers the entire container */
 }
 
+/* Styling for the text box class */
+.text-box {
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    text-decoration: none; /* Remove default underline for anchor tag */
+}
 
+/* Styling for the text inside the text box */
+.text-box p {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Subclasses for different box colors and positions */
+.box1 {
+    background-color: yellow; /* Adjust the background color as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: purple; /* Adjust the text color as needed */
+}
+
+.box2 {
+    background-color: lightblue; /* Adjust the background color as needed */
+    top: 20%;
+    left: 20%;
+    color: purple; /* Adjust the text color as needed */
+}
+
+.box3 {
+    background-color: lightgreen; /* Adjust the background color as needed */
+    bottom: 10%;
+    right: 10%;
+    color: purple; /* Adjust the text color as needed */
+}
 
