@@ -1,0 +1,9 @@
+.big6-background {
+    width: 100%;
+    filter: brightness(75%);
+    z-index: -1; /* Place the background behind other content */
+    height: 2000px;
+    pointer-events: none; /* Ensure the background image doesn't capture mouse events */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
