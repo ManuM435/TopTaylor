@@ -7,6 +7,14 @@
     object-fit: cover; /* Ensure the image covers the entire container */
 }
 
+@keyframes twinkling {
+    0% { border-color: rgba(220, 99, 99, 0.3); } /* Red */
+    25% { border-color: rgba(219, 203, 76, 0.3); } /* Green */
+    50% { border-color: rgba(113, 238, 91, 0.3); } /* Blue */
+    75% { border-color: rgba(77, 197, 216, 0.3); } /* Yellow */
+    100% { border-color: rgba(217, 75, 186, 0.3); } /* Magenta */
+}
+
 .welcome-box {
     position: absolute;
     z-index: 1;
@@ -15,9 +23,11 @@
     text-align: center;
     color: black;
     font-weight: bold;
-    background-color: antiquewhite;
+    background-color: rgba(210, 195, 170, 0.2);
     padding: 20px;
     border-radius: 10px;
+    border: 2px solid transparent; /* Transparent border initially */
+    animation: twinkling 2s infinite alternate; /* Apply twinkling animation */
 }
 
 .welcome-box h1 {
@@ -25,13 +35,6 @@
     margin: 0;
 }
 
-@keyframes twinkling {
-    0% { border-color: #ff0000; } /* Red */
-    25% { border-color: #00ff00; } /* Green */
-    50% { border-color: #0000ff; } /* Blue */
-    75% { border-color: #ffff00; } /* Yellow */
-    100% { border-color: #ff00ff; } /* Magenta */
-}
 
 /* Styling for the image box class */
 .image-box {
@@ -40,12 +43,11 @@
     cursor: pointer; /* Change cursor to indicate clickability */
     width: 300px; /* Default width of the container */
     height: 150px; /* Default height of the container */
-    border: 2px solid transparent; /* Transparent border initially */
     border-radius: 10px; /* Rounded corners */
-    animation: twinkling 2s infinite alternate; /* Apply twinkling animation */
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
+    opacity: 0.5;
 }
 
 /* Styling for the images inside the image box */
