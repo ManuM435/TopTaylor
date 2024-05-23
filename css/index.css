@@ -22,7 +22,7 @@
     left: 5%;
     text-align: center;
     color: black;
-    background-color: rgba(210, 195, 170, 0.2);
+    background-color: rgba(208, 199, 184, 0.16);
     padding: 20px;
     border-radius: 10px;
     border: 2px solid transparent; /* Transparent border initially */
@@ -41,7 +41,7 @@
     color: black;
     height: 40px; /* Adjusted height */
     line-height: 60px; /* Set line height equal to the box height */
-    background-color: rgba(210, 195, 170, 0.1);
+    background-color: rgba(215, 202, 180, 0.1);
     padding: 10px; /* Adjusted padding */
     border-radius: 10px;
     box-sizing: border-box; /* Ensure padding is included in the height */
@@ -73,7 +73,7 @@
     overflow: hidden; /* Hide overflow to prevent image from overflowing */
     cursor: pointer; /* Change cursor to indicate clickability */
     border-radius: 10px; /* Rounded corners */
-    background-color: rgba(241, 222, 191, 0.3);
+    background-color: rgba(208, 204, 198, 0.25);
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
