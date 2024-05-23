@@ -35,6 +35,39 @@
     margin: 0;
 }
 
+.desc-box {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    height: 40px; /* Adjusted height */
+    line-height: 60px; /* Set line height equal to the box height */
+    background-color: rgba(210, 195, 170, 0.1);
+    padding: 10px; /* Adjusted padding */
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.big6-desc {
+    top: 565px;
+    left: 6%;
+}
+
+.top26-desc {
+    top: 180px;
+    left: 64%;
+    transform: translate(-50%, -50%);
+}
+
+.albums-desc {
+    top: 510px;
+    left: 80%;
+}
+
 
 /* Styling for the image box class */
 .image-box {
