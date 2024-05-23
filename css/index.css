@@ -22,7 +22,6 @@
     left: 5%;
     text-align: center;
     color: black;
-    font-weight: bold;
     background-color: rgba(210, 195, 170, 0.2);
     padding: 20px;
     border-radius: 10px;
@@ -40,10 +39,9 @@
     z-index: 1;
     text-align: center;
     color: black;
-    font-weight: bold;
     height: 40px; /* Adjusted height */
     line-height: 60px; /* Set line height equal to the box height */
-    background-color: rgba(210, 195, 170, 0.075);
+    background-color: rgba(210, 195, 170, 0.1);
     padding: 10px; /* Adjusted padding */
     border-radius: 10px;
     box-sizing: border-box; /* Ensure padding is included in the height */
@@ -60,7 +58,7 @@
 
 .top26-desc {
     top: 192px;
-    left: 69%;
+    left: 70%;
     transform: translate(-50%, -50%);
 }
 
@@ -69,43 +67,49 @@
     left: 80%;
 }
 
-
 /* Styling for the image box class */
 .image-box {
     position: absolute;
     overflow: hidden; /* Hide overflow to prevent image from overflowing */
     cursor: pointer; /* Change cursor to indicate clickability */
-    width: 300px; /* Default width of the container */
-    height: 150px; /* Default height of the container */
     border-radius: 10px; /* Rounded corners */
+    background-color: rgba(241, 222, 191, 0.3);
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
-    opacity: 0.5;
-}
-
-/* Styling for the images inside the image box */
-.image-box img {
-    max-width: 100%; /* Ensure the image fits within the container */
-    max-height: 100%; /* Ensure the image fits within the container */
-    height: auto; /* Maintain aspect ratio */
+    font-size: 3.6em;
 }
 
 /* Subclasses for different box positions */
 .big6box {
-    top: 400px;
+    top: 407px;
     left: 6%;
+    width: 290px;
+    height: 140px;
 }
 
 .top26box {
-    top: 240px;
+    top: 220px;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 135px
+    height: 125px;
+    width: 250px;
 }
 
 .albumsbox {
     top: 360px;
-    left: 77%;
-    height: 130px
+    left:80%;
+    height: 130px;
+    width: 275px;
+}
+
+.evermoretext {
+    position: absolute;
+    z-index: 1;
+    top: 1400px;
+    color: white;
+    font-size: 10em;
+    letter-spacing: 3px;
+    left: 50%;
+    transform: translateX(-50%);
 }
