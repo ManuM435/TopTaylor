@@ -7,6 +7,24 @@
     object-fit: cover; /* Ensure the image covers the entire container */
 }
 
+.welcome-box {
+    position: absolute;
+    z-index: 1;
+    top: 17%;
+    left: 5%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.welcome-box h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
 @keyframes twinkling {
     0% { border-color: #ff0000; } /* Red */
     25% { border-color: #00ff00; } /* Green */
