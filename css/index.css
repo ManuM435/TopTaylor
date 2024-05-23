@@ -43,28 +43,29 @@
     font-weight: bold;
     height: 40px; /* Adjusted height */
     line-height: 60px; /* Set line height equal to the box height */
-    background-color: rgba(210, 195, 170, 0.1);
+    background-color: rgba(210, 195, 170, 0.075);
     padding: 10px; /* Adjusted padding */
     border-radius: 10px;
     box-sizing: border-box; /* Ensure padding is included in the height */
     align-items: center;
     justify-content: center;
+    line-height: 1.2;
     display: flex;
 }
 
 .big6-desc {
-    top: 565px;
+    top: 560px;
     left: 6%;
 }
 
 .top26-desc {
-    top: 180px;
-    left: 64%;
+    top: 192px;
+    left: 69%;
     transform: translate(-50%, -50%);
 }
 
 .albums-desc {
-    top: 510px;
+    top: 506px;
     left: 80%;
 }
 
