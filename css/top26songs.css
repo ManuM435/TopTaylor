@@ -1,0 +1,9 @@
+.top26-background { 
+    width: 100%;
+    filter: brightness(65%);
+    z-index: -1;
+    height: max-content;
+    opacity: 0.84;
+    pointer-events: none;
+    object-fit: cover; 
+}
