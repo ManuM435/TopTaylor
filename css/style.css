@@ -55,7 +55,7 @@ a {
     background-color: #9d733b; /* Light brown background */
     opacity: 0.72;
     border-radius: 24px; /* Border radius */
-    transition: background-color 0.25s, opacity 0.25s; /* Smooth transition for hover effect */
+    transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .head-nav-link:hover {

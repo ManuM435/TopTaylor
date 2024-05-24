@@ -74,10 +74,17 @@
     cursor: pointer; /* Change cursor to indicate clickability */
     border-radius: 10px; /* Rounded corners */
     background-color: rgba(208, 204, 198, 0.25);
+    border: 2px solid transparent; /* Transparent border initially */
     display: flex; /* Use flexbox layout */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
     font-size: 3.6em;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Apply ease-in-out transition */
+}
+
+.image-box:hover {
+    background-color: rgba(224, 210, 191, 0.55);
+    border-color: rgba(210, 189, 160, 0.62);
 }
 
 /* Subclasses for different box positions */
