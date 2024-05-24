@@ -115,8 +115,21 @@
     z-index: 1;
     top: 1100px;
     color: white;
-    font-size: 10em;
-    letter-spacing: 3px;
     left: 50%;
     transform: translateX(-50%);
 }
+
+.evermoretext h1 {
+    font-size: 10em;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+}
+
+.evermoretext p {
+    text-align: center;
+    margin-top: 0;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+}
+
+
