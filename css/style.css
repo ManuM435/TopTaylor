@@ -55,12 +55,12 @@ a {
     background-color: #9d733b; /* Light brown background */
     opacity: 0.72;
     border-radius: 24px; /* Border radius */
-    transition: border-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.25s, opacity 0.25s; /* Smooth transition for hover effect */
 }
 
 .head-nav-link:hover {
     background-color: rgb(135, 100, 55); /* Darker brown background on hover */
-    opacity: 0.92; /* Reduce opacity on hover */
+    opacity: 0.96; /* Reduce opacity on hover */
 }
 
 main {
