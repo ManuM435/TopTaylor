@@ -9,10 +9,15 @@
 }
 
 .container {
+    top: 20%;
+    left: 10%;
+    position: absolute;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+    width: 1500px;
 }
 
 .category {
