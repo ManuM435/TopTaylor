@@ -7,23 +7,21 @@
     <title>Top de Taylor</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Preload CSS -->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="preload" href="css/index.css" as="style">
+    <link rel="preload" href="css/bestSixes.css" as="style">
     <link rel="stylesheet" type="text/css" href="css/bestSixes.css">
     <script src="javascript/script.js" defer></script>
     <script src="javascript/common.js" defer></script>
     <script src="javascript/bestSixes.js" defer></script>
 
 </head>
-
 <body> 
-
     <div id="header"></div>
 
     <img src="img/big6-background.png" alt="August Cover" class="big6-background">
@@ -33,13 +31,17 @@
             <h2 class="category-title">Top Lyrics</h2>
             <div class="song-list">
                 <div class="song-item">
-                    <img src="img/song1.jpg" alt="Song 1 Cover" class="song-cover">
-                    <button class="play-button" data-audio="audio/song1.mp3">Play</button>
-                    <audio class="audio-player" src="audio/song1.mp3"></audio>
+                    <img src="img/t1s1.png" alt="T1S1 Cover" class="song-cover">
+                    <button class="play-button" data-audio="audio/song1.mp3">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <audio class="audio-player" src="audio/T1S1.mp3"></audio>
                 </div>
                 <div class="song-item">
-                    <img src="img/song2.jpg" alt="Song 2 Cover" class="song-cover">
-                    <button class="play-button" data-audio="audio/song2.mp3">Play</button>
+                    <img src="img/song2.jpg" alt="T1S2 Cover" class="song-cover">
+                    <button class="play-button" data-audio="audio/song2.mp3">
+                        <i class="fas fa-play"></i>
+                    </button>
                     <audio class="audio-player" src="audio/song2.mp3"></audio>
                 </div>
                 <!-- Repeat for more songs -->
@@ -49,3 +51,4 @@
     </div>
 
 </body>
+</html>
