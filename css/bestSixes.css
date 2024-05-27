@@ -17,7 +17,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    width: 1500px;
+    width: 1100px;
 }
 
 .category {
@@ -63,8 +63,8 @@
     color: white;
     border: none;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +84,7 @@ audio {
 .honorable-mentions-toggle {
     background-color: rgba(208, 204, 198, 0.25);
     border-radius: 10px;
-    padding: 0.5px;
+    padding: 10px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -92,7 +92,7 @@ audio {
 }
 
 .honorable-mentions-toggle:hover {
-    background-color: rgba(208, 204, 198, 0.5);
+    background-color: rgba(208, 204, 198, 0.6);
 }
 
 .honorable-mentions-toggle h3 span {
