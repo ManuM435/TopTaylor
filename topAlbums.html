@@ -23,6 +23,19 @@
 
 <body> 
 
+    <div class="preloader">
+        <span class="loader"></span>
+        <p>Loading...</p>
+    </div>
+
+    <script>
+        // Delayed removal of preloader after 3 seconds (adjust as needed)
+        setTimeout(function() {
+            const preloader = document.querySelector('.preloader');
+            preloader.remove();
+        }, 2000); // 3000 milliseconds = 3 seconds
+    </script>
+
     <div id="header"></div>
 
     <img src="img/albums-background.png" alt="Folklore Cover" class="topAlbums-background">
