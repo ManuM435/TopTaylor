@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 songList.style.display = 'block';
                 categories.forEach(cat => {
                     if (cat !== category) {
+                        cat.style.height = cat.scrollHeight + 'px'; // Set the height based on content
                         cat.classList.remove('expanded');
                     }
                 });
@@ -20,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
 
     const playButtons = document.querySelectorAll('.play-button');
 
