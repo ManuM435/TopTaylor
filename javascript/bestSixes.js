@@ -3,17 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     categories.forEach(category => {
         category.addEventListener('click', (event) => {
-            // Prevent the default action of hiding the song list when clicking a song item or the honorable mentions toggle
             if (event.target.closest('.song-item') || event.target.closest('.honorable-mentions-toggle')) return;
 
             const songList = category.querySelector('.song-list');
             if (songList.style.display === 'block') {
                 songList.style.display = 'none';
+                category.classList.remove('expanded');
             } else {
                 songList.style.display = 'block';
+                categories.forEach(cat => {
+                    if (cat !== category) {
+                        cat.classList.remove('expanded');
+                    }
+                });
+                category.classList.add('expanded');
             }
         });
     });
+
 
     const playButtons = document.querySelectorAll('.play-button');
 
