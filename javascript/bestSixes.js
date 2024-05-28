@@ -6,17 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (event.target.closest('.song-item') || event.target.closest('.honorable-mentions-toggle')) return;
 
             const songList = category.querySelector('.song-list');
-            if (songList.style.display === 'block') {
+            const isExpanded = category.classList.contains('expanded');
+
+            if (isExpanded) {
                 songList.style.display = 'none';
                 category.classList.remove('expanded');
             } else {
                 songList.style.display = 'block';
-                categories.forEach(cat => {
-                    if (cat !== category) {
-                        cat.style.height = cat.scrollHeight + 'px'; // Set the height based on content
-                        cat.classList.remove('expanded');
-                    }
-                });
                 category.classList.add('expanded');
             }
         });
