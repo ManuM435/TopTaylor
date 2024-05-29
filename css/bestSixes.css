@@ -2,7 +2,7 @@
     width: 100%;
     filter: brightness(72%);
     z-index: -1; /* Place the background behind other content */
-    height: max-content;
+    height: 100%;
     opacity: 0.95;
     pointer-events: none; /* Ensure the background image doesn't capture mouse events */
     object-fit: cover; /* Ensure the image covers the entire container */

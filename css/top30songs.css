@@ -2,7 +2,7 @@
     width: 100%;
     filter: brightness(65%);
     z-index: -1;
-    height: max-content;
+    height: 100%;
     opacity: 0.84;
     pointer-events: none;
     object-fit: cover; 
