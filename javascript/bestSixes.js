@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const categories = document.querySelectorAll('.category');
 
     categories.forEach(category => {
+        const songList = category.querySelector('.song-list');
         category.addEventListener('click', (event) => {
-            if (event.target.closest('.song-item') || event.target.closest('.honorable-mentions-toggle')) return;
+            if (event.target.closest('.song-item') || event.target.closest('.honorable-mentions-toggle') || event.target.closest('.play-button')) return;
 
-            const songList = category.querySelector('.song-list');
             const isExpanded = category.classList.contains('expanded');
 
             if (isExpanded) {
@@ -18,10 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const honorableMentionsToggles = document.querySelectorAll('.honorable-mentions-toggle');
+
+    honorableMentionsToggles.forEach(toggle => {
+        toggle.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the event from bubbling up to the category click event
+            const honorableMentions = toggle.nextElementSibling;
+            if (honorableMentions.style.display === 'block') {
+                honorableMentions.style.display = 'none';
+            } else {
+                honorableMentions.style.display = 'block';
+            }
+        });
+    });
+
     const playButtons = document.querySelectorAll('.play-button');
 
     playButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click from bubbling up to the category click event
             const audio = button.nextElementSibling;
             const icon = button.querySelector('i');
 
@@ -53,17 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const honorableMentionsToggles = document.querySelectorAll('.honorable-mentions-toggle');
 
-    honorableMentionsToggles.forEach(toggle => {
-        toggle.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the event from bubbling up to the category click event
-            const honorableMentions = toggle.nextElementSibling;
-            if (honorableMentions.style.display === 'block') {
-                honorableMentions.style.display = 'none';
-            } else {
-                honorableMentions.style.display = 'block';
-            }
-        });
-    });
 });
