@@ -99,6 +99,10 @@ audio {
     margin-top: 10px;
 }
 
+.honorable-mentions.expanded {
+    display: block;
+}
+
 .honorable-mentions-toggle:hover {
     background-color: rgba(208, 204, 198, 0.6);
 }

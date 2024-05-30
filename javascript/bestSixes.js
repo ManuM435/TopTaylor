@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     categories.forEach(category => {
         const songList = category.querySelector('.song-list');
+        const honorableMentionsToggle = category.querySelector('.honorable-mentions-toggle');
+        const honorableMentions = category.querySelector('.honorable-mentions');
+
         category.addEventListener('click', (event) => {
             if (event.target.closest('.song-item') || event.target.closest('.honorable-mentions-toggle') || event.target.closest('.play-button')) return;
 
@@ -10,26 +13,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isExpanded) {
                 songList.style.display = 'none';
+                honorableMentions.style.display = 'none'; // Collapse honorable mentions
                 category.classList.remove('expanded');
+                honorableMentions.classList.remove('expanded'); // Remove expanded class from honorable mentions
             } else {
                 songList.style.display = 'block';
                 category.classList.add('expanded');
             }
         });
-    });
 
-    const honorableMentionsToggles = document.querySelectorAll('.honorable-mentions-toggle');
+        if (honorableMentionsToggle) {
+            honorableMentionsToggle.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent the event from bubbling up to the category click event
 
-    honorableMentionsToggles.forEach(toggle => {
-        toggle.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the event from bubbling up to the category click event
-            const honorableMentions = toggle.nextElementSibling;
-            if (honorableMentions.style.display === 'block') {
-                honorableMentions.style.display = 'none';
-            } else {
-                honorableMentions.style.display = 'block';
-            }
-        });
+                const isHMExpanded = honorableMentions.classList.contains('expanded');
+
+                if (isHMExpanded) {
+                    honorableMentions.style.display = 'none';
+                    honorableMentions.classList.remove('expanded');
+                } else {
+                    honorableMentions.style.display = 'block';
+                    honorableMentions.classList.add('expanded');
+                }
+            });
+        }
     });
 
     const playButtons = document.querySelectorAll('.play-button');
@@ -67,6 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-
 });
