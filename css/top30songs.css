@@ -12,46 +12,64 @@
 }
 
 .song-container {
-    position: relative;
-    margin: 20px;
+    position: absolute; /* Ensure the container can be positioned absolutely */
+    display: flex;
+    justify-content: center;
+}
+
+.song-wrapper {
     display: flex;
     align-items: center;
-    width: 100%;
+    background-color: rgb(255, 200, 160, 0.3); 
+    border-radius: 10px; 
+    padding: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .order-button {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    padding: 10px 20px;
-    background-color: #007bff; /* You can change the background color */
-    color: white;
-    border: none;
+    padding: 10px;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px; /* Space between button and image */
+}
+
+.order-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white; /* Change text color to white on hover */
 }
 
 .song-image {
-    width: 200px; /* Adjust the width as needed */
-    height: auto;
-    margin: 0 20px;
+    width: 200px;
+    height: 40px;
+    object-fit: cover; /* Ensure image fits within specified dimensions */
 }
 
 .play-button {
     padding: 10px;
-    background-color: transparent;
+    background-color: #007bff; /* Blue background */
     border: none;
+    border-radius: 50%; /* Make it round */
     cursor: pointer;
     outline: none;
+    transition: background-color 0.3s ease;
+    margin-left: 5px; /* Space between image and button */
+}
+
+.play-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 .play-button i {
-    color: #007bff; /* You can change the play button color */
+    color: white; /* White play button icon */
     font-size: 24px;
 }
 
 .audio-player {
     display: none; /* Hide the audio player initially */
 }
+
 

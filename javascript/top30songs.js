@@ -11,12 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
     songContainers.forEach(container => {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
-        const randomX = getRandomPosition(0, windowWidth);
-        const randomY = getRandomPosition(0, windowHeight);
+        const containerWidth = container.offsetWidth;
+        
+        // Ensure the containers stay within the viewport
+        const randomX = getRandomPosition(0, windowWidth - containerWidth - 20);
+        const randomY = getRandomPosition(70, windowHeight * 5/3);
         
         container.style.position = 'absolute';
-        container.style.left = randomX + 'px';
-        container.style.top = randomY + 'px';
+        container.style.left = `${randomX}px`;
+        container.style.top = `${randomY}px`;
     });
     
     // Add click event listener to play buttons
