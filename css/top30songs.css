@@ -45,7 +45,6 @@
 .song-image {
     width: 200px;
     height: 40px;
-    object-fit: cover; /* Ensure image fits within specified dimensions */
 }
 
 .play-button {
