@@ -51,6 +51,8 @@
     padding: 10px;
     background-color: #007bff; /* Blue background */
     border: none;
+    width: 43px;
+    height: 43px;
     border-radius: 50%; /* Make it round */
     cursor: pointer;
     outline: none;
