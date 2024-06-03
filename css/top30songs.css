@@ -11,6 +11,20 @@
     object-fit: cover;
 }
 
+.top30inst {
+    position: absolute;
+    z-index: 1;
+    top: 12%;
+    left: 3%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(6, 0, 38);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(255, 228, 196, 0.2);
+}
+
 .song-container {
     position: absolute; /* Ensure the container can be positioned absolutely */
     display: flex;
