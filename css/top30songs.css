@@ -29,8 +29,9 @@
 .order-button {
     padding: 10px;
     background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color: #002a56;
+    background-color: rgb(250, 235, 215, 0.35);
+    border: 2px solid #012a56;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
