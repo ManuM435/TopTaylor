@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const categories = document.querySelectorAll('.category');
     const songContainers = document.querySelectorAll('.song-container');
+    const orderButtons = document.querySelectorAll('.order-button');
 
     // Function to generate random position
     function getRandomPosition(min, max) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const containerHeight = container.offsetHeight;
 
                 const randomX = getRandomPosition(10, windowWidth - containerWidth - 20);
-                const randomY = getRandomPosition(80, windowHeight * 11/4);
+                const randomY = getRandomPosition(80, windowHeight * 11/4 - containerHeight);
 
                 container.style.position = 'absolute';
                 container.style.left = `${randomX}px`;
@@ -55,29 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     positionContainers();
-
-    // Function to handle category click
-    categories.forEach(category => {
-        const songList = category.querySelector('.song-list');
-        const honorableMentionsToggle = category.querySelector('.honorable-mentions-toggle');
-        const honorableMentions = category.querySelector('.honorable-mentions');
-
-        category.addEventListener('click', (event) => {
-            if (event.target.closest('.song-item') || event.target.closest('.honorable-mentions-toggle') || event.target.closest('.play-button')) return;
-
-            const isExpanded = category.classList.contains('expanded');
-
-            if (isExpanded) {
-                songList.style.display = 'none';
-                honorableMentions.style.display = 'none'; // Collapse honorable mentions
-                category.classList.remove('expanded');
-                honorableMentions.classList.remove('expanded'); // Remove expanded class from honorable mentions
-            } else {
-                songList.style.display = 'block';
-                category.classList.add('expanded');
-            }
-        });
-    });
 
     // Add click event listener to play buttons
     const playButtons = document.querySelectorAll('.play-button');
@@ -112,6 +89,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.classList.remove('fa-pause');
                 icon.classList.add('fa-play');
             });
+        });
+    });
+
+    // Event listener for order buttons
+    orderButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const songContainer = songContainers[index];
+            const songId = songContainer.id;
+
+            // Ensure we have the correct target position from CSS
+            const targetElement = document.getElementById(songId);
+            const targetPosition = window.getComputedStyle(targetElement);
+            const left = targetPosition.left;
+            const top = targetPosition.top;
+
+            console.log(`Moving ${songId} to specified position: left=${left}, top=${top}`);
+
+            // Apply the target position to the song container
+            const songWrapper = songContainer.querySelector('.song-wrapper');
+            songWrapper.style.position = 'absolute';
+            songWrapper.style.left = left;
+            songWrapper.style.top = top;
+
+            // Update order button text and style
+            button.textContent = 'Ordered!';
+            button.style.backgroundColor = 'green';
+            button.disabled = true; // Disable further clicks
         });
     });
 });

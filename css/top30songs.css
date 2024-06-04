@@ -89,3 +89,19 @@
 }
 
 
+/* Aca todas las 30 songs para ordernar con los botones */
+
+#song1 {
+    left: 100px;
+    top: 200px;
+}
+
+#song2 {
+    left: 300px;
+    top: 400px;
+}
+
+/* Repeat for all 30 songs with their respective positions */
+
+
+
