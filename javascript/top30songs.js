@@ -80,8 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to get default position for a song
     function getDefaultPosition(songId) {
         const defaultPositions = {
-            song1: { left: '100px', top: '200px' },
+            song1: { left: '600px', top: '200px' },
             song2: { left: '300px', top: '400px' },
+            song3: { left: '500px', top: '600px' },
             // Add default positions for other songs as needed
         };
         return defaultPositions[songId] || { left: '100px', top: '200px' }; // Default position if not specified
