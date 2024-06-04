@@ -56,6 +56,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     positionContainers();
 
+    // Event listener for order buttons
+    orderButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const songContainer = songContainers[index];
+            const songId = songContainer.id;
+
+            // Get the specified position for the song
+            const targetPosition = getDefaultPosition(songId);
+
+            // Apply the target position to the song container
+            songContainer.style.position = 'absolute';
+            songContainer.style.left = targetPosition.left;
+            songContainer.style.top = targetPosition.top;
+
+            // Update order button text and style
+            button.textContent = 'Ordered!';
+            button.style.backgroundColor = 'green';
+            button.disabled = true; // Disable further clicks
+        });
+    });
+
+    // Function to get default position for a song
+    function getDefaultPosition(songId) {
+        const defaultPositions = {
+            song1: { left: '100px', top: '200px' },
+            song2: { left: '300px', top: '400px' },
+            // Add default positions for other songs as needed
+        };
+        return defaultPositions[songId] || { left: '100px', top: '200px' }; // Default position if not specified
+    }
+
     // Add click event listener to play buttons
     const playButtons = document.querySelectorAll('.play-button');
     playButtons.forEach(button => {
@@ -91,31 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // Event listener for order buttons
-    orderButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const songContainer = songContainers[index];
-            const songId = songContainer.id;
-
-            // Ensure we have the correct target position from CSS
-            const targetElement = document.getElementById(songId);
-            const targetPosition = window.getComputedStyle(targetElement);
-            const left = targetPosition.left;
-            const top = targetPosition.top;
-
-            console.log(`Moving ${songId} to specified position: left=${left}, top=${top}`);
-
-            // Apply the target position to the song container
-            const songWrapper = songContainer.querySelector('.song-wrapper');
-            songWrapper.style.position = 'absolute';
-            songWrapper.style.left = left;
-            songWrapper.style.top = top;
-
-            // Update order button text and style
-            button.textContent = 'Ordered!';
-            button.style.backgroundColor = 'green';
-            button.disabled = true; // Disable further clicks
-        });
-    });
 });
+
+
