@@ -80,10 +80,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to get default position for a song
     function getDefaultPosition(songId) {
         const defaultPositions = {
-            song1: { left: '600px', top: '200px' },
-            song2: { left: '300px', top: '400px' },
-            song3: { left: '500px', top: '600px' },
-            // Add default positions for other songs as needed
+            song1: { left: '625px', top: '160px' },
+            song2: { left: '625px', top: '230px' },
+            song3: { left: '625px', top: '300px' },
+            song4: { left: '625px', top: '370px' },
+            song5: { left: '625px', top: '440px' },
+            song6: { left: '625px', top: '510px' },
+            song7: { left: '625px', top: '580px' },
+            song8: { left: '625px', top: '650px' },
+            song9: { left: '625px', top: '720px' },
+            song10: { left: '625px', top: '790px' },
+            song11: { left: '625px', top: '860px' },
+            song12: { left: '625px', top: '930px' },
+            song13: { left: '625px', top: '1000px' },
+            song14: { left: '625px', top: '1070px' },
+            song15: { left: '625px', top: '1140px' },
+            song16: { left: '625px', top: '1210px' },
+            song17: { left: '625px', top: '1280px' },
+            song18: { left: '625px', top: '1350px' },
+            song19: { left: '625px', top: '1420px' },
+            song20: { left: '625px', top: '1490px' },
+            song21: { left: '625px', top: '1560px' },
+            song22: { left: '625px', top: '1630px' },
+            song23: { left: '625px', top: '1700px' },
+            song24: { left: '625px', top: '1770px' },
+            song25: { left: '625px', top: '1840px' },
+            song26: { left: '625px', top: '1910px' },
+            song27: { left: '625px', top: '1980px' },
+            song28: { left: '625px', top: '2050px' },
+            song29: { left: '625px', top: '2120px' },
+            song30: { left: '625px', top: '2190px' },
         };
         return defaultPositions[songId] || { left: '100px', top: '200px' }; // Default position if not specified
     }
