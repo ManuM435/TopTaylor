@@ -110,6 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
             song28: { left: '625px', top: '2050px' },
             song29: { left: '625px', top: '2120px' },
             song30: { left: '625px', top: '2190px' },
+
+            // aca van las honorable mentions
+
+            song31: { left: '625px', top: '2360px' },
+            song32: { left: '625px', top: '2430px' },
+            song33: { left: '625px', top: '2500px' },
+            song34: { left: '625px', top: '2570px' },
+            song35: { left: '625px', top: '2640px' },
+            song36: { left: '625px', top: '2710px' },
+            song37: { left: '625px', top: '2780px' },
+            song38: { left: '625px', top: '2850px' },
+            song39: { left: '625px', top: '2920px' },
+            song40: { left: '625px', top: '2990px' },
+            song41: { left: '625px', top: '3060px' },
         };
         return defaultPositions[songId] || { left: '100px', top: '200px' }; // Default position if not specified
     }
