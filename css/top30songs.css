@@ -102,4 +102,19 @@
     display: none; /* Hide the audio player initially */
 }
 
+.honorable-title {
+    position: absolute;
+    z-index: 1;
+    top: 2280px;
+    left: 625px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(6, 0, 38);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 235, 205, 0.16);
+    width: 346px;
+    text-align: center;
+}
 
