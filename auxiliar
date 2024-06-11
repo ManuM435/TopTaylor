@@ -1,0 +1,123 @@
+// js
+
+let currentIndex = 0;
+const images = document.querySelectorAll('.them_ben_memes img');
+const descriptions = document.querySelectorAll('.them_ben_memes .image-description');
+
+function showImage(index) {
+    images.forEach((image, i) => {
+        if (i === index) {
+            image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
+        }
+    });
+}
+
+function updateDescription(index) {
+    descriptions.forEach((description, i) => {
+        if (i === index) {
+            description.style.display = 'block';
+        } else {
+            description.style.display = 'none';
+        }
+    });
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+    updateDescription(currentIndex);
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+    updateDescription(currentIndex);
+}
+
+document.querySelector('.prev').addEventListener('click', prevImage);
+document.querySelector('.next').addEventListener('click', nextImage);
+
+showImage(currentIndex);
+updateDescription(currentIndex);
+
+
+
+
+
+
+
+
+
+// css
+
+/* Slider para los memes de Ben Shapiro */
+
+/* .slider {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: none; 
+}
+
+.slide img {
+    width: 100%;
+}
+
+.them_ben_memes {
+    position: relative; 
+}
+
+.them_ben_memes .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.them_ben_memes img {
+    width: 600px;
+    height: 500px;
+}
+
+.them_ben_memes .image-description {
+    display: none; 
+    text-align: center;
+    margin-top: 10px; 
+    max-width: 600px; /
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.arrow {
+    position: absolute;
+    top: 250px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.prev {
+    left: 300px;
+}
+
+.next {
+    right: 300px;
+    
+} */
