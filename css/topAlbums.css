@@ -1,3 +1,12 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .topAlbums-background {
     position: fixed; 
     top: 0;
@@ -12,7 +21,10 @@
 }
 
 .slider-container {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 800px;
     overflow: hidden;
@@ -20,32 +32,33 @@
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
-    margin: 0 auto; /* Center the slider container horizontally */
 }
 
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    margin-left: -30%; /* Offset to position the slider content */
+    width: 100%; /* Make sure the slider takes up the full width of the container */
 }
 
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-    text-align: center;
-    padding-left: 30%; /* Offset to position each slide */
+    text-align: left; /* Align text to the left */
+    padding: 0 10%;
 }
 
 .album-content {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: left; /* Align text (if any) to the left */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap; /* Allow items to wrap */
+    margin-top: 10px;
 }
 
 .album-cover {
-    max-width: 200px;
-    max-height: 200px;
+    width: 225px;
+    height: 200px;
     margin-right: 20px;
 }
 
@@ -60,13 +73,15 @@
 }
 
 .album-details img {
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    height: auto;
     object-fit: cover;
 }
 
 .album-description {
     margin-top: 20px;
+    max-width: 530px; /* Set the max-width for the description */
+    word-wrap: break-word; /* Break words if they are too long */
 }
 
 .arrow {
