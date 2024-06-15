@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const containerWidth = container.offsetWidth;
                 const containerHeight = container.offsetHeight;
 
-                const randomX = getRandomPosition(10, windowWidth - containerWidth - 20);
+                const randomX = getRandomPosition(10, windowWidth - containerWidth - 60);
                 const randomY = getRandomPosition(80, windowHeight * 11/4 - containerHeight);
 
                 container.style.position = 'absolute';
