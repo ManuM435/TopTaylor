@@ -52,6 +52,7 @@
     width: 340px;
     height: 300px;
     margin-right: 20px;
+    object-fit: cover;
 }
 
 .album-details ul {
@@ -61,13 +62,16 @@
 }
 
 .album-details li {
+    display: flex;
+    align-items: center;
     margin: 5px 0;
 }
 
-.album-details img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
+.song-photo {
+    width: 280px;
+    height: 50px;
+    object-fit: fill;
+    margin-right: 8px;
 }
 
 .album-description {
@@ -94,4 +98,27 @@
 
 .right-arrow {
     right: 10px;
+}
+
+.play-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+.play-button:hover {
+    background-color: #45a049;
+}
+
+audio {
+    display: none;
 }
