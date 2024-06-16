@@ -79,54 +79,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to get default position for a song
     function getDefaultPosition(songId) {
+        // Calculate the 'top' position dynamically
+        const firstTopPosition = 160;
+        const interval = 30; // Interval between each 'top' position
+    
+        // Calculate the 'top' position based on songId
+        let topPosition = firstTopPosition + ((parseInt(songId.replace('song', '')) - 1) * interval);
+    
         const defaultPositions = {
-            song1: { left: '625px', top: '160px' },
-            song2: { left: '625px', top: '230px' },
-            song3: { left: '625px', top: '300px' },
-            song4: { left: '625px', top: '370px' },
-            song5: { left: '625px', top: '440px' },
-            song6: { left: '625px', top: '510px' },
-            song7: { left: '625px', top: '580px' },
-            song8: { left: '625px', top: '650px' },
-            song9: { left: '625px', top: '720px' },
-            song10: { left: '625px', top: '790px' },
-            song11: { left: '625px', top: '860px' },
-            song12: { left: '625px', top: '930px' },
-            song13: { left: '625px', top: '1000px' },
-            song14: { left: '625px', top: '1070px' },
-            song15: { left: '625px', top: '1140px' },
-            song16: { left: '625px', top: '1210px' },
-            song17: { left: '625px', top: '1280px' },
-            song18: { left: '625px', top: '1350px' },
-            song19: { left: '625px', top: '1420px' },
-            song20: { left: '625px', top: '1490px' },
-            song21: { left: '625px', top: '1560px' },
-            song22: { left: '625px', top: '1630px' },
-            song23: { left: '625px', top: '1700px' },
-            song24: { left: '625px', top: '1770px' },
-            song25: { left: '625px', top: '1840px' },
-            song26: { left: '625px', top: '1910px' },
-            song27: { left: '625px', top: '1980px' },
-            song28: { left: '625px', top: '2050px' },
-            song29: { left: '625px', top: '2120px' },
-            song30: { left: '625px', top: '2190px' },
-
-            // aca van las honorable mentions
-
-            song31: { left: '625px', top: '2360px' },
-            song32: { left: '625px', top: '2430px' },
-            song33: { left: '625px', top: '2500px' },
-            song34: { left: '625px', top: '2570px' },
-            song35: { left: '625px', top: '2640px' },
-            song36: { left: '625px', top: '2710px' },
-            song37: { left: '625px', top: '2780px' },
-            song38: { left: '625px', top: '2850px' },
-            song39: { left: '625px', top: '2920px' },
-            song40: { left: '625px', top: '2990px' },
-            song41: { left: '625px', top: '3060px' },
+            song1: { left: '625px', top: `${topPosition}px` },
+            song2: { left: '625px', top: `${topPosition + interval}px` },
+            song3: { left: '625px', top: `${topPosition + interval * 2}px` },
+            song4: { left: '625px', top: `${topPosition + interval * 3}px` },
+            song5: { left: '625px', top: `${topPosition + interval * 4}px` },
+            song6: { left: '625px', top: `${topPosition + interval * 5}px` },
+            song7: { left: '625px', top: `${topPosition + interval * 6}px` },
+            song8: { left: '625px', top: `${topPosition + interval * 7}px` },
+            song9: { left: '625px', top: `${topPosition + interval * 8}px` },
+            song10: { left: '625px', top: `${topPosition + interval * 9}px` },
+            song11: { left: '625px', top: `${topPosition + interval * 10}px` },
+            song12: { left: '625px', top: `${topPosition + interval * 11}px` },
+            song13: { left: '625px', top: `${topPosition + interval * 12}px` },
+            song14: { left: '625px', top: `${topPosition + interval * 13}px` },
+            song15: { left: '625px', top: `${topPosition + interval * 14}px` },
+            song16: { left: '625px', top: `${topPosition + interval * 15}px` },
+            song17: { left: '625px', top: `${topPosition + interval * 16}px` },
+            song18: { left: '625px', top: `${topPosition + interval * 17}px` },
+            song19: { left: '625px', top: `${topPosition + interval * 18}px` },
+            song20: { left: '625px', top: `${topPosition + interval * 19}px` },
+            song21: { left: '625px', top: `${topPosition + interval * 20}px` },
+            song22: { left: '625px', top: `${topPosition + interval * 21}px` },
+            song23: { left: '625px', top: `${topPosition + interval * 22}px` },
+            song24: { left: '625px', top: `${topPosition + interval * 23}px` },
+            song25: { left: '625px', top: `${topPosition + interval * 24}px` },
+            song26: { left: '625px', top: `${topPosition + interval * 25}px` },
+            song27: { left: '625px', top: `${topPosition + interval * 26}px` },
+            song28: { left: '625px', top: `${topPosition + interval * 27}px` },
+            song29: { left: '625px', top: `${topPosition + interval * 28}px` },
+            song30: { left: '625px', top: `${topPosition + interval * 29}px` },
+            song31: { left: '625px', top: `${topPosition + interval * 30}px` },
+            song32: { left: '625px', top: `${topPosition + interval * 31}px` },
+            song33: { left: '625px', top: `${topPosition + interval * 32}px` },
+            song34: { left: '625px', top: `${topPosition + interval * 33}px` },
+            song35: { left: '625px', top: `${topPosition + interval * 34}px` },
+            song36: { left: '625px', top: `${topPosition + interval * 35}px` },
+            song37: { left: '625px', top: `${topPosition + interval * 36}px` },
+            song38: { left: '625px', top: `${topPosition + interval * 37}px` },
+            song39: { left: '625px', top: `${topPosition + interval * 38}px` },
+            song40: { left: '625px', top: `${topPosition + interval * 39}px` },
+            song41: { left: '625px', top: `${topPosition + interval * 40}px` },
         };
+    
         return defaultPositions[songId] || { left: '100px', top: '200px' }; // Default position if not specified
-    }
+    }    
 
     // Add click event listener to play buttons
     const playButtons = document.querySelectorAll('.play-button');
