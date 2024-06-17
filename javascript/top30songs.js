@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const containerHeight = container.offsetHeight;
 
                 const randomX = getRandomPosition(10, windowWidth - containerWidth - 60);
-                const randomY = getRandomPosition(80, windowHeight * 11/4 - containerHeight);
+                const randomY = getRandomPosition(120, windowHeight * 11/4 - containerHeight);
 
                 container.style.position = 'absolute';
                 container.style.left = `${randomX}px`;
@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Calculate the 'top' position dynamically
         const firstTopPosition = 160;
         const interval = 30; // Interval between each 'top' position
+        const extraHonor = 75; // Extra space for honorable mentions
     
         // Calculate the 'top' position based on songId
         let topPosition = firstTopPosition + ((parseInt(songId.replace('song', '')) - 1) * interval);
@@ -117,17 +118,20 @@ document.addEventListener('DOMContentLoaded', () => {
             song28: { left: '625px', top: `${topPosition + interval * 27}px` },
             song29: { left: '625px', top: `${topPosition + interval * 28}px` },
             song30: { left: '625px', top: `${topPosition + interval * 29}px` },
-            song31: { left: '625px', top: `${topPosition + interval * 30}px` },
-            song32: { left: '625px', top: `${topPosition + interval * 31}px` },
-            song33: { left: '625px', top: `${topPosition + interval * 32}px` },
-            song34: { left: '625px', top: `${topPosition + interval * 33}px` },
-            song35: { left: '625px', top: `${topPosition + interval * 34}px` },
-            song36: { left: '625px', top: `${topPosition + interval * 35}px` },
-            song37: { left: '625px', top: `${topPosition + interval * 36}px` },
-            song38: { left: '625px', top: `${topPosition + interval * 37}px` },
-            song39: { left: '625px', top: `${topPosition + interval * 38}px` },
-            song40: { left: '625px', top: `${topPosition + interval * 39}px` },
-            song41: { left: '625px', top: `${topPosition + interval * 40}px` },
+
+            // Aca las honorable mentions
+
+            song31: { left: '625px', top: `${topPosition + interval * 30 + extraHonor}px` },
+            song32: { left: '625px', top: `${topPosition + interval * 31 + extraHonor}px` },
+            song33: { left: '625px', top: `${topPosition + interval * 32 + extraHonor}px` },
+            song34: { left: '625px', top: `${topPosition + interval * 33 + extraHonor}px` },
+            song35: { left: '625px', top: `${topPosition + interval * 34 + extraHonor}px` },
+            song36: { left: '625px', top: `${topPosition + interval * 35 + extraHonor}px` },
+            song37: { left: '625px', top: `${topPosition + interval * 36 + extraHonor}px` },
+            song38: { left: '625px', top: `${topPosition + interval * 37 + extraHonor}px` },
+            song39: { left: '625px', top: `${topPosition + interval * 38 + extraHonor}px` },
+            song40: { left: '625px', top: `${topPosition + interval * 39 + extraHonor}px` },
+            song41: { left: '625px', top: `${topPosition + interval * 40 + extraHonor}px` },
         };
     
         return defaultPositions[songId] || { left: '100px', top: '200px' }; // Default position if not specified
